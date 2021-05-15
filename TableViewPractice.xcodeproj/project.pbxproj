@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638AF010264FA459006E1D6C /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AF00F264FA459006E1D6C /* AddEditTableViewController.swift */; };
 		63FA87AC264EDB300083D741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA87AB264EDB300083D741 /* AppDelegate.swift */; };
 		63FA87AE264EDB300083D741 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA87AD264EDB300083D741 /* SceneDelegate.swift */; };
 		63FA87B3264EDB300083D741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FA87B1264EDB300083D741 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		638AF00F264FA459006E1D6C /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
 		63FA87A8264EDB300083D741 /* TableViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FA87AB264EDB300083D741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FA87AD264EDB300083D741 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				63FA87C0264EDD760083D741 /* Support */,
 				63FA87C7264EE1D90083D741 /* Emoji.swift */,
 				63FA87C4264EDE7A0083D741 /* EmojiTableViewController.swift */,
+				638AF00F264FA459006E1D6C /* AddEditTableViewController.swift */,
 				63FA87B1264EDB300083D741 /* Main.storyboard */,
 			);
 			path = TableViewPractice;
@@ -152,6 +155,7 @@
 				63FA87C5264EDE7A0083D741 /* EmojiTableViewController.swift in Sources */,
 				63FA87C8264EE1D90083D741 /* Emoji.swift in Sources */,
 				63FA87AE264EDB300083D741 /* SceneDelegate.swift in Sources */,
+				638AF010264FA459006E1D6C /* AddEditTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,34 @@ class EmojiTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
 
     }
+    
+    
+    // MARK: - Work with Data
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        guard segue.identifier == "unwind",let sourceVC = segue.source as? AddEditTableViewController, let emoji = sourceVC.emoji else { return }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            emojis[selectedIndexPath.row] = emoji
+            tableView.reloadRows(at: [selectedIndexPath], with: .none)
+        } else {
+            let newIndexPath = IndexPath(row: emojis.count, section: 0)
+            emojis.append(emoji)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
+    @IBSegueAction func editEmoji(_ coder: NSCoder, sender: Any?) -> AddEditTableViewController? {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            let emojiToEdit = emojis[indexPath.row]
+            return AddEditTableViewController(coder: coder, emoji: emojiToEdit)
+        } else {
+            return AddEditTableViewController(coder: coder, emoji: nil)
+        }
+        
+    }
+    
+    
+    
 
     // MARK: - Table view data source
 
@@ -56,6 +84,7 @@ class EmojiTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = emojis.remove(at: sourceIndexPath.row)
         emojis.insert(movedEmoji, at: destinationIndexPath.row)
+        Emoji.save(with: emojis)
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
