@@ -21,8 +21,6 @@ class EmojiTableViewController: UITableViewController {
         }
         
         navigationItem.leftBarButtonItem = editButtonItem
-        
-        self.title = "My Emoji"
 
     }
     
